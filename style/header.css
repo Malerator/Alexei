@@ -7,7 +7,7 @@
 }
 
 .logo {
-  font-size: 30px;
+  font-size: 60px;
   color: #595555;
 }
 
@@ -17,7 +17,7 @@
   line-height: 22px;
   text-decoration: none;
   color: #222020;
-  /* transition: 0.4s; */
+  border-radius: 5px;
   -webkit-transition: all 0.5s ease;
   -moz-transition: all 0.5s ease;
   transition: all 0.5s ease;
@@ -26,13 +26,16 @@
 .header__menu li a:hover {
   color: #454546;
   font-size: 26px;
-  /* transition: 0.4s; */
   -moz-box-shadow: 0 0 10px #000;
   -webkit-box-shadow: 0 0 10px #000;
   box-shadow: 0 0 10px #000;
   -webkit-transition: all 0.5s ease;
   -moz-transition: all 0.5s ease;
   transition: all 0.5s ease;
+}
+
+.wrap__img {
+  margin-left: 70px;
 }
 
 .header__burger {
