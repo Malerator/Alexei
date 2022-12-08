@@ -1,0 +1,85 @@
+#home {
+  padding: 100px 0 104px;
+}
+
+h1 {
+  font-family: "Gilroy-Bold";
+  font-size: 65px;
+}
+
+.home__info {
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.title {
+  font-family: "Gilroy-Bold";
+  margin-top: 20px;
+  font-size: 30px;
+}
+
+.auto {
+  max-width: 100%;
+  height: auto;
+}
+
+.btn {
+  margin-top: 40px;
+  font-size: 20px;
+  background-color: #222020;
+  border: 0;
+  color: #fff;
+  padding: 20px 50px;
+  border-radius: 5px;
+  cursor: pointer;
+  overflow: hidden;
+  position: relative;
+  transition: 0.4s;
+}
+
+.btn:hover {
+  background-color: #454546;
+  transition: 0.4s;
+}
+
+.btn:before {
+  font-family: "FontAwesome";
+  font-size: 30px;
+  content: "\f155";
+  color: #fff;
+  text-align: center;
+  position: absolute;
+  top: 15px;
+  left: -30px;
+  transition: all 400ms ease;
+}
+
+.btn:hover:before {
+  left: 20px;
+}
+
+.btn_info {
+  margin-top: 1rem;
+}
+
+/* начало мобильной версии*/
+@media (max-width: 425px) {
+  #home {
+    padding: 65px 30px 83px;
+  }
+
+  .home__info {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 37px;
+  }
+  .home__info p {
+    align-self: flex-start;
+    padding-bottom: 0;
+  }
+  h1 {
+    margin-bottom: 23px;
+  }
+}

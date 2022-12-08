@@ -1,0 +1,55 @@
+.header__menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 33px 0;
+  border-bottom: 1px solid #828282;
+}
+
+.logo {
+  font-size: 30px;
+  color: #595555;
+}
+
+.header__menu li a {
+  font-family: "Gilroy-Bold";
+  font-size: 22px;
+  line-height: 22px;
+  text-decoration: none;
+  color: #222020;
+  /* transition: 0.4s; */
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.header__menu li a:hover {
+  color: #454546;
+  font-size: 26px;
+  /* transition: 0.4s; */
+  -moz-box-shadow: 0 0 10px #000;
+  -webkit-box-shadow: 0 0 10px #000;
+  box-shadow: 0 0 10px #000;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.header__burger {
+  display: none;
+}
+
+/* начало мобильной версии */
+
+@media (max-width: 425px) {
+  .header__menu {
+    display: none;
+  }
+
+  .header__burger {
+    position: fixed;
+    top: 68px;
+    right: 30px;
+    display: block;
+  }
+}
