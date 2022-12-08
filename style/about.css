@@ -22,6 +22,15 @@
   color: green;
 }
 
+.proposal {
+  display: flex;
+  justify-content: space-between;
+}
+
+h3 {
+  font-family: "Gilroy-Bold";
+  font-size: 50px;
+}
 /* начало мобильной версии */
 
 @media (max-width: 425px) {
