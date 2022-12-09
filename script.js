@@ -1,31 +1,31 @@
-const popUp = document.createElement("div");
-popUp.className = "modal";
-const form = document.querySelector("form");
-form.className = "form";
-const btn = document.querySelector(".btn");
-const closeBtn = document.createElement("button");
-closeBtn.className = "close";
-closeBtn.textContent = "Закрыть";
-const sendBtn = document.querySelector(".send");
+// const popUp = document.createElement("div");
+// popUp.className = "modal";
+// const form = document.querySelector("form");
+// form.className = "form";
+// const btn = document.querySelector(".btn");
+// const closeBtn = document.createElement("button");
+// closeBtn.className = "close";
+// closeBtn.textContent = "Закрыть";
+// const sendBtn = document.querySelector(".send");
 
-form.append(closeBtn);
-popUp.append(form);
-document.body.append(popUp);
+// form.append(closeBtn);
+// popUp.append(form);
+// document.body.append(popUp);
 
-btn.addEventListener("click", openModal);
-closeBtn.addEventListener("click", closeModal);
-popUp.addEventListener("click", closeModal);
-form.addEventListener("click", (event) => event.stopPropagation());
+// btn.addEventListener("click", openModal);
+// closeBtn.addEventListener("click", closeModal);
+// popUp.addEventListener("click", closeModal);
+// form.addEventListener("click", (event) => event.stopPropagation());
 
-function openModal() {
-  popUp.style.display = "flex";
-  document.body.style.overflow = "hidden";
-}
+// function openModal() {
+//   popUp.style.display = "flex";
+//   document.body.style.overflow = "hidden";
+// }
 
-function closeModal() {
-  popUp.style.display = "none";
-  document.body.style.overflow = "initial";
-}
+// function closeModal() {
+//   popUp.style.display = "none";
+//   document.body.style.overflow = "initial";
+// }
 
 // function handleSubmit(event) {
 //   event.preventDefault();
