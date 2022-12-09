@@ -13,8 +13,9 @@
     <link rel="stylesheet" href="style/style.css" />
     <link rel="stylesheet" href="style/header.css" />
     <link rel="stylesheet" href="style/home.css" />
-    <link rel="stylesheet" href="style/contact.css"/>
+    <link rel="stylesheet" href="style/contact.css" />
     <link rel="stylesheet" href="style/about.css" />
+    <link rel="stylesheet" href="style/modal.css" />
   </head>
   <body>
     <header>
@@ -61,8 +62,8 @@
           </div>
         </div>
       </section>
-      
-            <section id="about">
+
+      <section id="about">
         <div class="container">
           <div class="card">
             <h2 class="card__title">ОПЕРАТИВНО</h2>
@@ -103,19 +104,73 @@
               <p class="link">+7 999 010 20 10</p>
               <p class="link">auto@mail.ru</p>
               <div class="social">
-                <a href="#"><img src="./images/inst-icon.png" alt="inst" width="50" height="50"></a>
-                <a href="#"><img src="./images/vk-icon.png" alt="inst" width="50" height="50"></a>
-                <a href="#"><img src="./images/tg-icon.png" alt="inst" width="50" height="50"></a>
+                <a href="#"
+                  ><img
+                    src="./images/inst-icon.png"
+                    alt="inst"
+                    width="50"
+                    height="50"
+                /></a>
+                <a href="#"
+                  ><img
+                    src="./images/vk-icon.png"
+                    alt="inst"
+                    width="50"
+                    height="50"
+                /></a>
+                <a href="#"
+                  ><img
+                    src="./images/tg-icon.png"
+                    alt="inst"
+                    width="50"
+                    height="50"
+                /></a>
               </div>
             </div>
-            <img src="./images/contact-bg2.webp" alt="" width="720px" height="360px">
+            <img
+              src="./images/contact-bg2.webp"
+              alt=""
+              width="720px"
+              height="360px"
+            />
           </div>
-          
         </div>
-        
-        </section>
-
+      </section>
+      <form>
+        <!-- <input placeholder="МАРКА" name="mark" />
+        <input placeholder="МОДЕЛЬ" name="model" />
+        <input placeholder="ПРОБЕГ" name="run" />
+        <input placeholder="ГОД" name="year" /> -->
+        <input placeholder="ИМЯ" name="fName" />
+        <input placeholder="НОМЕР ТЕЛЕФОНА" name="tel" />
+        <button class="send" type="submit">Отправить</button>
+      </form>
     </main>
     <footer></footer>
+    <script src="./script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
+
+    <script>
+      const form2 = document.querySelector("form");
+
+      const TOKEN = "5856059976:AAHi68Tu9T8jSghs6j6tlfVk1dZWWPw-PGc";
+      const CHAT_ID = "-1001695833016";
+      const URL = `https://api.telegram.org/bot${TOKEN}/sendMessage`;
+
+      form2.addEventListener("submit", function (el) {
+        e.preventDefault();
+
+        let message = `<b>Заявка с сайта</b>\n`;
+        message += `<b>Имя </b>${this.fName.value}\n`;
+        message += `<b>Телефон </b>${this.tel.value}`;
+        // const URL = `https://api.telegram.org/bot${TOKEN}/sendMessage?chat_id=${CHAT_ID}&text=${message}`;
+
+        axios.post(URL, {
+          chat_id: CHAT_ID,
+          parse_mode: "html",
+          text: message,
+        });
+      });
+    </script>
   </body>
 </html>
