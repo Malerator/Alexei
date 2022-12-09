@@ -18,20 +18,13 @@
   text-decoration: none;
   color: #222020;
   border-radius: 5px;
-  -webkit-transition: all 0.5s ease;
-  -moz-transition: all 0.5s ease;
   transition: all 0.5s ease;
 }
 
 .header__menu li a:hover {
   color: #454546;
-  font-size: 26px;
-  -moz-box-shadow: 0 0 10px #000;
-  -webkit-box-shadow: 0 0 10px #000;
-  box-shadow: 0 0 10px #000;
-  -webkit-transition: all 0.5s ease;
-  -moz-transition: all 0.5s ease;
-  transition: all 0.5s ease;
+  display: block;
+  transform: scale(1.2, 1.2);
 }
 
 .wrap__img {
