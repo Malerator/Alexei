@@ -22,6 +22,10 @@ body {
   font-weight: 900;
 }
 
+section {
+  min-height: 100vh;
+}
+
 @font-face {
   font-family: "Gilroy-Bold";
   src: url("../fonts/gilroy-Bold.ttf") format("truetype"),
