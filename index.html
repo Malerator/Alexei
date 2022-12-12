@@ -142,62 +142,17 @@
         <input placeholder="ПРОБЕГ" name="run" />
         <input placeholder="ГОД" name="year" /> -->
         <input placeholder="ИМЯ" name="fName" />
-        <input placeholder="НОМЕР ТЕЛЕФОНА" name="tel" />
+        <input
+          class="maskphone"
+          placeholder="+7 (900) 123-45-67"
+          name="tel"
+          pattern="\+7\s?[\(]{0,1}9[0-9]{2}[\)]{0,1}\s?\d{3}[-]{0,1}\d{2}[-]{0,1}\d{2}"
+        />
         <button class="send" type="submit">Отправить</button>
       </form>
     </main>
     <footer></footer>
-    <!-- <script src="./script.js"></script> -->
+    <script src="./script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
-
-    <script>
-      const popUp = document.createElement("div");
-      popUp.className = "modal";
-      const form = document.querySelector("form");
-      form.className = "form";
-      const btn = document.querySelector(".btn");
-      const closeBtn = document.createElement("button");
-      closeBtn.className = "close";
-      closeBtn.textContent = "Закрыть";
-      const sendBtn = document.querySelector(".send");
-
-      form.append(closeBtn);
-      popUp.append(form);
-      document.body.append(popUp);
-
-      btn.addEventListener("click", openModal);
-      closeBtn.addEventListener("click", closeModal);
-      popUp.addEventListener("click", closeModal);
-      form.addEventListener("click", (event) => event.stopPropagation());
-
-      function openModal() {
-        popUp.style.display = "flex";
-        document.body.style.overflow = "hidden";
-      }
-
-      function closeModal() {
-        popUp.style.display = "none";
-        document.body.style.overflow = "initial";
-      }
-
-      const TOKEN = "5856059976:AAHi68Tu9T8jSghs6j6tlfVk1dZWWPw-PGc";
-      const CHAT_ID = "-1001695833016";
-      const URL = `https://api.telegram.org/bot${TOKEN}/sendMessage`;
-
-      form.addEventListener("submit", function (el) {
-        el.preventDefault();
-
-        let message = `<b>Заявка с сайта</b>\n`;
-        message += `<b>Имя </b>${this.fName.value}\n`;
-        message += `<b>Телефон </b>${this.tel.value}`;
-        // const URL = `https://api.telegram.org/bot${TOKEN}/sendMessage?chat_id=${CHAT_ID}&text=${message}`;
-
-        axios.post(URL, {
-          chat_id: CHAT_ID,
-          parse_mode: "html",
-          text: message,
-        });
-      });
-    </script>
   </body>
 </html>
