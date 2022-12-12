@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Выкуп Авто</title>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <link
       rel="stylesheet"
       href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
@@ -63,7 +64,12 @@
         </div>
       </section>
 
-      <section id="about">
+      <section
+        id="about"
+        data-aos="flip-left"
+        data-aos-easing="ease-out-cubic"
+        data-aos-duration="2000"
+      >
         <div class="container">
           <h2 class="title">ПРЕИМУЩЕСТВА</h2>
           <div class="card">
@@ -97,7 +103,12 @@
         </div>
       </section>
 
-      <section id="contact">
+      <section
+        id="contact"
+        data-aos="fade-down"
+        data-aos-easing="linear"
+        data-aos-duration="1500"
+      >
         <div class="container">
           <div class="contact-wrapper">
             <h2 class="title">КОНТАКТЫ</h2>
@@ -138,22 +149,27 @@
         </div>
       </section>
       <form>
-        <!-- <input placeholder="МАРКА" name="mark" />
+        <input placeholder="МАРКА" name="mark" />
         <input placeholder="МОДЕЛЬ" name="model" />
         <input placeholder="ПРОБЕГ" name="run" />
-        <input placeholder="ГОД" name="year" /> -->
-        <input placeholder="ИМЯ" name="fName" />
+        <input placeholder="ГОД" name="year" />
+        <input placeholder="ИМЯ" name="fName" required />
         <input
           class="maskphone"
           placeholder="+7 (900) 123-45-67"
           name="tel"
           pattern="\+7\s?[\(]{0,1}9[0-9]{2}[\)]{0,1}\s?\d{3}[-]{0,1}\d{2}[-]{0,1}\d{2}"
+          required
         />
         <button class="send" type="submit">Отправить</button>
       </form>
     </main>
     <footer></footer>
     <script src="./script.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
     <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
   </body>
 </html>
