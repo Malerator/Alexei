@@ -6,8 +6,13 @@ const btn = document.querySelector(".btn");
 const closeBtn = document.createElement("button");
 closeBtn.className = "close";
 closeBtn.type = "button";
-closeBtn.textContent = "Закрыть";
+const img = document.createElement("img");
+img.src = "./images/close.svg";
+img.width = "15";
+img.height = "15";
 const sendBtn = document.querySelector(".send");
+
+closeBtn.append(img);
 
 form.append(closeBtn);
 popUp.append(form);
@@ -45,6 +50,8 @@ form.addEventListener("submit", function (el) {
     parse_mode: "html",
     text: message,
   });
+  el.target.reset();
+  closeModal();
 });
 
 document.addEventListener("DOMContentLoaded", function () {

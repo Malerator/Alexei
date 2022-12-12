@@ -6,12 +6,63 @@
 }
 
 .form {
+  position: relative;
+  padding: 30px 0;
   display: flex;
   flex-direction: column;
-
   margin: auto;
-  width: 500px;
-  height: 500px;
+  width: 400px;
+  height: fit-content;
   background-color: #fff;
   border-radius: 20px;
+}
+
+.send {
+  display: inline-block;
+  width: 250px;
+  align-self: center;
+  position: relative;
+  margin-top: 40px;
+  font-size: 18px;
+  background-color: #222020;
+  border: 0;
+  color: #fff;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  overflow: hidden;
+  transition: 0.4s;
+}
+
+.send:hover {
+  background-color: #454546;
+  transition: 0.4s;
+}
+
+.close {
+  position: absolute;
+  right: -18px;
+  top: -10px;
+  border: 0;
+  background: none;
+  cursor: pointer;
+}
+
+input {
+  margin: 10px auto;
+  min-width: 300px;
+  padding: 10px;
+  background-color: rgb(240, 239, 239);
+  border: 0;
+  border-radius: 10px;
+  transition: 0.4s;
+}
+
+input:hover {
+  outline: 1px solid #222020;
+  transition: 0.4s;
+}
+
+input:focus {
+  outline: 1px solid red;
 }
