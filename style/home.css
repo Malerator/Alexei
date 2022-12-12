@@ -25,6 +25,7 @@ h1 {
 }
 
 .btn {
+  position: relative;
   margin-top: 40px;
   font-size: 18px;
   background-color: #222020;
