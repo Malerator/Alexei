@@ -13,11 +13,11 @@ h1 {
   align-items: center;
 }
 
-.title {
+/* .title {
   font-family: "Gilroy-Bold";
   margin-top: 20px;
   font-size: 30px;
-}
+} */
 
 .auto {
   max-width: 100%;

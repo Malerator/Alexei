@@ -1,15 +1,18 @@
 .card__title {
+  flex: 1;
   font-family: "Gilroy-Bold";
   font-size: 40px;
 }
 
 .card__item {
+  flex: 1;
   font-size: 18px;
   line-height: 22px;
 }
 
 .card {
-  margin-bottom: 60px;
+  font-weight: 400;
+  margin: 50px 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -19,7 +22,8 @@
 
 .fa {
   font-size: 30px;
-  color: rgb(174, 178, 174);
+  color: black;
+  /* color: rgb(174, 178, 174); */
 }
 
 .proposal {
