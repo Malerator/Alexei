@@ -15,6 +15,13 @@ body {
   box-sizing: content-box;
 }
 
+.title {
+  font-family: "Gilroy-Bold";
+  align-self: flex-start;
+  font-size: 53px;
+  font-weight: 900;
+}
+
 @font-face {
   font-family: "Gilroy-Bold";
   src: url("../fonts/gilroy-Bold.ttf") format("truetype"),

@@ -9,12 +9,7 @@
     gap: 100px;
 }
 
-.contact-title {
-    font-family: "Gilroy-Bold";
-    align-self: flex-start;
-    font-size: 53px;
-    font-weight: 900;
-}
+
 
 .contact-info {
     font-family: "Gilroy-Medium";
