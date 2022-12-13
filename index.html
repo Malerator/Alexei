@@ -22,15 +22,25 @@
     <header>
       <nav>
         <div class="container">
-          <ul class="header__menu">
+          <ul class="header_menu">
             <h1 class="logo">alexauto</h1>
             <li><a href="#about">ПРЕИМУЩЕСТВА</a></li>
             <li><a href="#">О НАС</a></li>
             <li><a href="#">КАК МЫ РАБОТАЕМ</a></li>
             <li><a href="#contact">КОНТАКТЫ</a></li>
           </ul>
-          <div class="header__burger">
-            <img src="./images/Group 3.svg" alt="burger" />
+          <div class="hamburger-menu">
+            <input id="menu__toggle" type="checkbox" />
+            <label class="menu__btn" for="menu__toggle">
+              <span></span>
+            </label>
+            <ul class="menu__box">
+              <li><a class="menu__item" href="#">Главная</a></li>
+              <li><a class="menu__item" href="#">Проекты</a></li>
+              <li><a class="menu__item" href="#">Команда</a></li>
+              <li><a class="menu__item" href="#">Блог</a></li>
+              <li><a class="menu__item" href="#">Контакты</a></li>
+            </ul>
           </div>
         </div>
       </nav>
@@ -48,7 +58,11 @@
                 АВТОМОБИЛЯ
               </p>
             </div>
-            <div data-aos="fade-down-left" data-aos-duration="2000" class="wrap__img">
+            <div
+              data-aos="fade-down-left"
+              data-aos-duration="2000"
+              class="wrap__img"
+            >
               <picture>
                 <source media="(max-width: 425px)" srcset="" />
                 <img
@@ -64,9 +78,7 @@
         </div>
       </section>
 
-      <section
-        id="about"
-      >
+      <section id="about">
         <div class="container">
           <h2 class="title">ПРЕИМУЩЕСТВА</h2>
           <div class="card" data-aos="fade-down-right" data-aos-duration="2000">
