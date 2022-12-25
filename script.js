@@ -51,7 +51,6 @@ form.addEventListener("submit", function (el) {
   message += `<b>Год выпуска </b>${this.year.value}\n`;
   message += `<b>Имя </b>${this.fName.value}\n`;
   message += `<b>Телефон </b>${this.tel.value}`;
-
   axios.post(URL, {
     chat_id: CHAT_ID,
     parse_mode: "html",
@@ -64,7 +63,7 @@ form.addEventListener("submit", function (el) {
 /***/
 
 document.addEventListener("DOMContentLoaded", function () {
-  var input = document.querySelector(".maskphone");
+  let input = document.querySelector(".maskphone");
 
   input.addEventListener("input", mask);
   input.addEventListener("focus", mask);
@@ -73,10 +72,10 @@ document.addEventListener("DOMContentLoaded", function () {
   //   /***/
 
   function mask(event) {
-    var blank = "+_ (___) ___-__-__";
+    let blank = "+_ (___) ___-__-__";
 
-    var i = 0;
-    var val = this.value.replace(/\D/g, "").replace(/^8/, "7");
+    let i = 0;
+    let val = this.value.replace(/\D/g, "").replace(/^8/, "7");
 
     this.value = blank.replace(/./g, function (char) {
       if (/[_\d]/.test(char) && i < val.length) return val.charAt(i++);
@@ -102,7 +101,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     if (elem.createTextRange) {
-      var range = elem.createTextRange();
+      let range = elem.createTextRange();
       range.collapse(true);
       range.moveEnd("character", pos);
       range.moveStart("character", pos);
