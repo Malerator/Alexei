@@ -71,7 +71,7 @@ input:hover {
   outline: 1px solid #222020;
   transition: 0.4s;
 }
-*/ input:focus {
+input:focus {
   outline: 2px solid rgb(10, 10, 10);
 }
 
