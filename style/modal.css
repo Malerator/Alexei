@@ -179,7 +179,7 @@ h5 {
     overflow: hidden;
     width: 80%;
     -webkit-appearance: none;
-    background-color: #676a67;
+    background-color: #454546;
   }
 
   input[type="range"]::-webkit-slider-runnable-track {

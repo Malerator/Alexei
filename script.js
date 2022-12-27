@@ -58,8 +58,8 @@ form.addEventListener("submit", function (el) {
     parse_mode: "html",
     text: message,
   });
-  el.target.reset();
   closeModal();
+  form.submit();
 });
 
 var currentTab = 0;
@@ -71,12 +71,14 @@ function showTab(n) {
   x[n].style.display = "block";
   if (n == 0) {
     document.getElementById("prevBtn").style.display = "none";
+    document.getElementById("nextBtn").style.display = "inline";
   } else {
+    sendBtn.style.display = "none";
     document.getElementById("prevBtn").style.display = "inline";
+    document.getElementById("nextBtn").style.display = "inline";
   }
   if (n == x.length - 1) {
     document.getElementById("nextBtn").innerHTML = "ОТПРАВИТЬ";
-    // document.getElementById("nextBtn").setAttribute("type", "submit");
     document.getElementById("nextBtn").style.display = "none";
     sendBtn.style.display = "inline-block";
   } else {
@@ -90,10 +92,10 @@ function nextPrev(n) {
   if (n == 1 && !validateForm()) return false;
   x[currentTab].style.display = "none";
   currentTab = currentTab + n;
-  if (currentTab >= x.length) {
-    form.submit();
-    return false;
-  }
+  // if (currentTab >= x.length) {
+  //   form.submit();
+  //   return false;
+  // }
   showTab(currentTab);
 }
 
