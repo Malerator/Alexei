@@ -36,6 +36,7 @@
   cursor: pointer;
   overflow: hidden;
   transition: 0.4s;
+  outline: 1px solid black;
   display: none;
 }
 
@@ -123,6 +124,7 @@ input.invalid {
   border: 0;
   color: #fff;
   padding: 10px;
+  border: 1px solid black;
   border-radius: 5px;
   cursor: pointer;
   overflow: hidden;
@@ -145,6 +147,7 @@ input.invalid {
   border: 0;
   color: #fff;
   padding: 10px;
+  border: 1px solid black;
   border-radius: 5px;
   cursor: pointer;
   overflow: hidden;
