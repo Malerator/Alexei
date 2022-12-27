@@ -123,16 +123,47 @@
           <img src="./images/contact-bg2.webp" alt="" width="720px" height="360px" />
         </div>
     </section>
-
     <form>
-      <input placeholder="МАРКА" name="mark" />
-      <input placeholder="МОДЕЛЬ" name="model" />
-      <input placeholder="ПРОБЕГ" name="run" />
-      <input placeholder="ГОД" name="year" />
-      <input placeholder="ИМЯ" name="fName" required />
-      <input class="maskphone" placeholder="+7 (900) 123-45-67" name="tel"
-        pattern="\+7\s?[\(]{0,1}9[0-9]{2}[\)]{0,1}\s?\d{3}[-]{0,1}\d{2}[-]{0,1}\d{2}" required />
-      <button class="send" type="submit">Отправить</button>
+      <div class="tab">
+          <input placeholder="МАРКА" name="mark" />
+          <input placeholder="МОДЕЛЬ" name="model" />
+      </div>
+      <div class="tab">
+         <div class="info">
+          <input type="range" min="0" max="300000" step="any" name="run" value="0" oninput="this.nextElementSibling.value = Math.round(this.value)"/>
+          <output>0</output><h5>км</h5>
+        </div>
+         <div class="info">
+          <input type="range" min="1980" max="2023" step="1" name="year" value="0" oninput="this.nextElementSibling.value = Math.round(this.value)"/>
+          <output>1980</output><h5>ГОД ВЫПУСКА</h5>
+        </div>
+      </div>
+      <div class="tab">
+          <input placeholder="ИМЯ" name="fName" required />
+          <input
+        placeholder="+7 (900) 123-45-67"
+        name="tel"
+        pattern="\+7\s?[\(]{0,1}9[0-9]{2}[\)]{0,1}\s?\d{3}[-]{0,1}\d{2}[-]{0,1}\d{2}" required
+      />
+      </div>
+          <div style="overflow: auto">
+        <div class="wrapBtn">
+          <button type="button" id="prevBtn" onclick="nextPrev(-1)">
+            НАЗАД
+          </button>
+          <button type="button" id="nextBtn" onclick="nextPrev(1)">ВПЕРЕД</button>
+          <button class="send" type="submit">ОТПРАВИТЬ</button>
+        </div>
+      </div>
+ <div style="text-align: center; margin-top: 40px">
+        <span class="step"></span>
+        <span class="step"></span>
+        <span class="step"></span>
+        <!-- <span class="step"></span>
+        <span class="step"></span>
+        <span class="step"></span> -->
+
+      </div>
     </form>
   </main>
   <footer></footer>

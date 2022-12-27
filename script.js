@@ -17,6 +17,12 @@ img.height = "15";
 
 const sendBtn = document.querySelector(".send");
 
+const TOKEN = "5856059976:AAHi68Tu9T8jSghs6j6tlfVk1dZWWPw-PGc";
+
+const CHAT_ID = "-1001695833016";
+
+const URL = `https://api.telegram.org/bot${TOKEN}/sendMessage`;
+
 closeBtn.append(img);
 form.append(closeBtn);
 popUp.append(form);
@@ -37,17 +43,13 @@ function closeModal() {
   document.body.style.overflow = "initial";
 }
 
-const TOKEN = "5856059976:AAHi68Tu9T8jSghs6j6tlfVk1dZWWPw-PGc";
-const CHAT_ID = "-1001695833016";
-const URL = `https://api.telegram.org/bot${TOKEN}/sendMessage`;
-
 form.addEventListener("submit", function (el) {
   el.preventDefault();
 
   let message = `<b>Заявка с сайта</b>\n`;
   message += `<b>Модель </b>${this.model.value}\n`;
   message += `<b>Марка </b>${this.mark.value}\n`;
-  message += `<b>Пробег </b>${this.run.value}\n`;
+  message += `<b>Пробег </b>${Math.round(this.run.value)}\n`;
   message += `<b>Год выпуска </b>${this.year.value}\n`;
   message += `<b>Имя </b>${this.fName.value}\n`;
   message += `<b>Телефон </b>${this.tel.value}`;
@@ -60,20 +62,79 @@ form.addEventListener("submit", function (el) {
   closeModal();
 });
 
+var currentTab = 0;
+
+showTab(currentTab);
+
+function showTab(n) {
+  var x = document.getElementsByClassName("tab");
+  x[n].style.display = "block";
+  if (n == 0) {
+    document.getElementById("prevBtn").style.display = "none";
+  } else {
+    document.getElementById("prevBtn").style.display = "inline";
+  }
+  if (n == x.length - 1) {
+    document.getElementById("nextBtn").innerHTML = "ОТПРАВИТЬ";
+    // document.getElementById("nextBtn").setAttribute("type", "submit");
+    document.getElementById("nextBtn").style.display = "none";
+    sendBtn.style.display = "inline-block";
+  } else {
+    document.getElementById("nextBtn").innerHTML = "ВПЕРЕД";
+  }
+  fixStepIndicator(n);
+}
+
+function nextPrev(n) {
+  var x = document.getElementsByClassName("tab");
+  if (n == 1 && !validateForm()) return false;
+  x[currentTab].style.display = "none";
+  currentTab = currentTab + n;
+  if (currentTab >= x.length) {
+    form.submit();
+    return false;
+  }
+  showTab(currentTab);
+}
+
+function validateForm() {
+  let x,
+    y,
+    i,
+    valid = true;
+  x = document.getElementsByClassName("tab");
+  y = x[currentTab].getElementsByTagName("input");
+  for (i = 0; i < y.length; i++) {
+    if (y[i].value == "") {
+      y[i].className += " invalid";
+      valid = false;
+    }
+  }
+  if (valid) {
+    document.getElementsByClassName("step")[currentTab].className += " finish";
+  }
+  return valid;
+}
+
+function fixStepIndicator(num) {
+  let i,
+    bolProgres = document.getElementsByClassName("step");
+  for (i = 0; i < bolProgres.length; i++) {
+    bolProgres[i].className = bolProgres[i].className.replace(" active", "");
+  }
+  bolProgres[num].className += " active";
+}
+
 /***/
 
 document.addEventListener("DOMContentLoaded", function () {
   let input = document.querySelector(".maskphone");
-
   input.addEventListener("input", mask);
   input.addEventListener("focus", mask);
   input.addEventListener("blur", mask);
 
-  //   /***/
-
   function mask(event) {
     let blank = "+_ (___) ___-__-__";
-
     let i = 0;
     let val = this.value.replace(/\D/g, "").replace(/^8/, "7");
 
@@ -89,8 +150,6 @@ document.addEventListener("DOMContentLoaded", function () {
       setCursorPosition(this, this.value.length);
     }
   }
-
-  //   /***/
 
   function setCursorPosition(elem, pos) {
     elem.focus();
