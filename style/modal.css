@@ -16,6 +16,7 @@
   min-width: 320px;
   height: fit-content;
   background-color: rgb(44, 40, 40);
+  opacity: 0.9;
   border-radius: 20px;
   box-shadow: -40px -40px 10px rgba(63, 59, 59, 0.8);
 }
