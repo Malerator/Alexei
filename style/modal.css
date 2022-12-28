@@ -18,7 +18,7 @@
   background-color: rgb(44, 40, 40);
   opacity: 0.9;
   border-radius: 20px;
-  box-shadow: -40px -40px 10px rgba(63, 59, 59, 0.8);
+  box-shadow: -20px -20px 10px rgba(162, 202, 235, 0.8);
 }
 
 .send {
@@ -66,20 +66,22 @@ input {
   background-color: rgb(240, 239, 239);
   border: 0;
   border-radius: 5px;
-  transition: 0.4s;
+  outline: 2px solid #080808;
+
+  /* transition: 0.4s; */
 }
 
-input:hover {
-  outline: 1px solid #222020;
+/* input:hover {
+  outline: 2px solid #222020;
   transition: 0.4s;
 }
 input:focus {
   outline: 2px solid rgb(10, 10, 10);
-}
+} */
 
 /********/
 input.invalid {
-  outline: 3px solid red;
+  outline: 1px solid red;
 }
 
 .tab {

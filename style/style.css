@@ -2,10 +2,36 @@ html {
   scroll-behavior: smooth;
 }
 
+body::-webkit-scrollbar {
+  display: none; /* Safari and Chrome */
+}
+
 body {
+  scrollbar-width: none; /* Firefox */
   font-family: "Gilroy-Medium", Arial, Helvetica, sans-serif;
   color: #222020;
   background-color: #fff;
+}
+
+header {
+  overflow: hidden;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  width: 100%;
+  background-color: #fff;
+}
+
+h1 {
+  font-family: "Gilroy-Bold" Arial, Helvetica, sans-serif;
+  font-weight: 900;
+  font-size: 65px;
+}
+
+section {
+  /* min-height: 100vh; */
+  padding: 30px 0;
+  margin-top: 100px;
 }
 
 .container {
@@ -13,19 +39,6 @@ body {
   padding: 0 30px 0;
   max-width: 1200px;
   box-sizing: content-box;
-}
-
-.title {
-  font-family: "Gilroy-Bold";
-  align-self: flex-start;
-  font-size: 53px;
-  font-weight: 900;
-  text-decoration: underline;
-}
-
-section {
-  min-height: 100vh;
-  padding: 30px 0;
 }
 
 @font-face {

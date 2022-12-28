@@ -35,6 +35,10 @@ h3 {
   font-family: "Gilroy-Bold";
   font-size: 50px;
 }
+
+.offer {
+  mix-blend-mode: color-burn;
+}
 /* начало мобильной версии */
 
 @media (max-width: 425px) {
