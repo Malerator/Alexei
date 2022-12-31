@@ -46,9 +46,7 @@
     </header>
 
     <main>
-      <section id="home" data-aos="flip-left"
-     data-aos-easing="ease-out-cubic"
-     data-aos-duration="800">
+      <section id="home" data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="800">
         <div class="container">
           <div class="home__info">
             <div data-aos="fade-down-right" data-aos-duration="3000" data-aos-easing="ease-out-quart">
@@ -60,19 +58,17 @@
                 АВТОМОБИЛЯ
               </p>
             </div>
-            <div data-aos="fade-down-left" data-aos-duration="3000" data-aos-easing="ease-out-quart" >
-                <picture>
-                  <source media="(max-width: 425px)" srcset="" />
-                  <img class="auto" src="./images/audi-r8-spyder-v-moskve.jpg" alt="" width="940" height="387" />
-                </picture>
+            <div data-aos="fade-down-left" data-aos-duration="3000" data-aos-easing="ease-out-quart">
+              <picture>
+                <source media="(max-width: 425px)" srcset="" />
+                <img class="auto" src="./images/audi-r8-spyder-v-moskve.jpg" alt="" width="940" height="387" />
+              </picture>
             </div>
           </div>
         </div>
       </section>
 
-      <section id="about" data-aos="flip-left"
-     data-aos-easing="ease-out-cubic"
-     data-aos-duration="800">
+      <section id="about" data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="800">
         <div class="container">
           <h2 class="title">ПРЕИМУЩЕСТВА</h2>
           <div class="card" data-aos="fade-down-right" data-aos-duration="3000">
@@ -102,9 +98,7 @@
         </div>
       </section>
 
-      <section id="s_offer" data-aos="flip-left"
-     data-aos-easing="ease-out-cubic"
-     data-aos-duration="800">
+      <section id="s_offer" data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="800">
         <div class="container">
           <h2 class="title">TITLE</h2>
           <div class="proposal">
@@ -114,9 +108,7 @@
         </div>
       </section>
 
-      <section id="contact" data-aos="flip-left"
-     data-aos-easing="ease-out-cubic"
-     data-aos-duration="800">
+      <section id="contact" data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="800">
         <div class="container">
           <div class="contact-wrapper">
             <h2 class="title">КОНТАКТЫ</h2>
@@ -153,6 +145,31 @@
           </div>
         </div>
         <div class="tab">
+            <h6 style="color: #fff;">состояние вашего авто</h6>
+          <div class="wrap_check">
+            <div class="check">
+            <input type="checkbox" id="highload1" name="highload1">
+            <label for="highload1" data-onlabel="on" data-offlabel="off" class="lb1"></label>
+            <p class="check_item">отличное</p>
+          </div>
+          <div class="check">
+            <input type="checkbox" id="highload2" name="highload2">
+            <label for="highload2" data-onlabel="on" data-offlabel="off" class="lb1"></label>
+            <p class="check_item">хорошее</p>
+          </div>
+          <div class="check">
+            <input type="checkbox" id="highload3" name="highload3">
+            <label for="highload3" data-onlabel="on" data-offlabel="off" class="lb1"></label>
+            <p class="check_item">удовлетворительное</p>
+          </div>
+          <div class="check">
+            <input type="checkbox" id="highload4" name="highload4">
+            <label for="highload4" data-onlabel="on" data-offlabel="off" class="lb1"></label>
+            <p class="check_item">плохое</p>
+          </div>
+          </div>
+        </div>
+        <div class="tab">
           <input placeholder="ИМЯ" name="fName" required />
           <input class="maskphone" placeholder="+7 (900) 123-45-67" name="tel"
             pattern="\+7\s?[\(]{0,1}9[0-9]{2}[\)]{0,1}\s?\d{3}[-]{0,1}\d{2}[-]{0,1}\d{2}" required />
@@ -174,13 +191,13 @@
           <span class="step"></span>
           <span class="step"></span>
           <span class="step"></span>
-          <!-- <span class="step"></span> -->
+          <span class="step"></span>
           <!-- <span class="step"></span> -->
         </div>
       </form>
 
     </main>
-    
+
     <footer></footer>
     <script src="./script.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
