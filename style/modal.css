@@ -16,9 +16,8 @@
   min-width: 320px;
   height: fit-content;
   background-color: rgb(44, 40, 40);
-  opacity: 0.9;
+  opacity: 0.8;
   border-radius: 20px;
-  box-shadow: -20px -20px 10px rgba(162, 202, 235, 0.8);
 }
 
 .send {
