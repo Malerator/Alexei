@@ -51,6 +51,7 @@ form.addEventListener("submit", function (el) {
   message += `<b>Марка </b>${this.mark.value}\n`;
   message += `<b>Пробег </b>${Math.round(this.run.value)}\n`;
   message += `<b>Год выпуска </b>${this.year.value}\n`;
+  message += `<b>Состояние </b>${this.highload4.value}\n`;
   message += `<b>Имя </b>${this.fName.value}\n`;
   message += `<b>Телефон </b>${this.tel.value}`;
   axios.post(URL, {

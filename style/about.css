@@ -4,6 +4,15 @@
   font-size: 40px;
 }
 
+.about__title {
+  margin-top: 58px;
+  font-family: "Gilroy-Medium";
+  align-self: flex-start;
+  font-size: 53px;
+  font-weight: 600;
+  text-decoration: underline;
+}
+
 .card__item {
   flex: 1;
   font-size: 18px;
@@ -26,19 +35,6 @@
   /* color: rgb(174, 178, 174); */
 }
 
-.proposal {
-  display: flex;
-  justify-content: space-between;
-}
-
-h3 {
-  font-family: "Gilroy-Bold";
-  font-size: 50px;
-}
-
-.offer {
-  mix-blend-mode: color-burn;
-}
 /* начало мобильной версии */
 
 @media (max-width: 425px) {

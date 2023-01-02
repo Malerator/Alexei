@@ -1,0 +1,21 @@
+#offer {
+  background-color: rgb(201, 35, 35);
+}
+
+.proposal {
+  display: flex;
+  justify-content: space-between;
+}
+
+.offer__title {
+  font-family: "Gilroy-Medium";
+  align-self: flex-start;
+  font-size: 53px;
+  font-weight: 600;
+  text-decoration: underline;
+}
+
+h3 {
+  font-family: "Gilroy-Bold";
+  font-size: 50px;
+}

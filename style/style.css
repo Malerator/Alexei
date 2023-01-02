@@ -14,7 +14,7 @@ body {
 }
 
 header {
-  overflow: hidden;
+  /* overflow: hidden; */
   position: fixed;
   z-index: 1;
   top: 0;
@@ -30,7 +30,10 @@ h1 {
 
 section {
   min-height: 100vh;
-  margin-top: 100px;
+}
+
+img {
+  mix-blend-mode: color-burn;
 }
 
 .container {

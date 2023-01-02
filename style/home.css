@@ -1,5 +1,5 @@
 #home {
-  padding: 50px 0 104px;
+  padding: 150px 0 0 0;
   background: radial-gradient(
     circle,
     rgba(51, 109, 124, 1) 0%,
@@ -13,7 +13,7 @@
   align-items: center;
 }
 
-.title {
+.home__title {
   font-family: "Gilroy-Medium";
   align-self: flex-start;
   font-size: 53px;
